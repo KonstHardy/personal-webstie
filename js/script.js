@@ -42,8 +42,8 @@ $('.elements, .elements-gradient').addClass('elements--active');
   });
 
 // menu mobile
-  let burger = document.querySelector('.header__btn-menu');
-  let menu = document.querySelector('.header__menu');
+  var burger = document.querySelector('.header__btn-menu');
+  var menu = document.querySelector('.header__menu');
 
   burger.addEventListener('click', function (e) {
     e.preventDefault();
@@ -78,7 +78,7 @@ $('.elements, .elements-gradient').addClass('elements--active');
 
   $('.form__callback').each(function () {
     $(this).validate({
-      errorPlacement(error, element) {
+      errorPlacement: function (error, element) {
         return true;
       },
       focusInvalid: true,
