@@ -21,7 +21,7 @@ const jsFiles = [
 function styles() {
 	// return gulp.src('./src/css/**/*.css')
 	return gulp.src(cssFiles)
-	.pipe(concat('all.css'))	
+	.pipe(concat('styles.min.css'))
 	// .pipe(autoprefixer({
 	// 	cascade: false,
 	// }))
@@ -30,9 +30,9 @@ function styles() {
 }
 
 function scripts() {
-	// return gulp.src('./src/js/**/*.js')	
+	// return gulp.src('./src/js/**/*.js')
 	return gulp.src(jsFiles)
-	.pipe(concat('all.js'))	
+	.pipe(concat('scripts.min.js'))
 	.pipe(uglify({
 		toplevel:true,
 	}))

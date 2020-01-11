@@ -67,9 +67,10 @@ $('.elements, .elements-gradient').addClass('elements--active');
         menu.classList.toggle('menu--mobile');
         //scroll on/off
         $('html, body').toggleClass('stop-scroll');
-      } else {
-          // нет, размер окна более 479px
       }
+      // else {
+      //   // нет, размер окна более 479px
+      // }
     };
   });
 
@@ -129,6 +130,24 @@ $('.elements, .elements-gradient').addClass('elements--active');
       //scroll-on
       $('html, body').removeClass('stop-scroll');
     };
+  });
+
+// проверка чекбокса
+  var checkboxes = $("input[type=checkbox]");
+
+  $(".form").on('submit', function(e) {
+    var checker = false;
+    checkboxes.each(function() {
+      if ($(this).prop('checked') == true) {
+        checker = true;
+      }
+    });
+
+    if (checker == false) {
+      e.preventDefault();
+      $('.form__text').addClass('form__text--error');
+      $('.form__text').addClass('checkbox-error');
+    }
   });
 
 });

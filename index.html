@@ -168,7 +168,7 @@
 
       <div class="footer__right-column">
         <button class="btn-callback footer__btn-callback" type="button">Заказать звонок</button>
-        <ul class="social-networks">
+        <ul class="social-networks footer__social-networks">
           <li class="social-networks__icon"><a class="social-networks__link social-networks__link--vk" href="http://vk.com"></a></li>
           <li class="social-networks__icon"><a class="social-networks__link social-networks__link--fb" href="http://facebook.com"></a></li>
           <li class="social-networks__icon"><a class="social-networks__link social-networks__link--tw" href="http://twitter.com"></a></li>
@@ -184,16 +184,24 @@
 <!-- form -->
   <div class="form form__popup">
     <form class="form-callback form__callback" action="#" method="post">
-      <button class="form__btn-close" type="button">
+      <button aria-label="Закрыть" class="form__btn-close" type="button">
         <span class="form__btn-line"></span>
         <span class="form__btn-line"></span>
       </button>
       <h2 class="form__title">Ваши данные</h2>
 
-      <input class="form-input form__input" type="text" name="name" placeholder="Имя">
-      <input class="form-input form__input" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
-      <input class="form-input form__input email" type="email" name="mail" placeholder="Электронная почта">
-      <input class="form__input form-input deadline" type="text" name="name" placeholder="Сроки">
+      <label class="form-label form__label">Ваше имя:
+        <input class="form-input form__input" type="text" name="name" placeholder="Дмитрий">
+      </label>
+      <label class="form-label form__label">Номер телефона:
+        <input class="form-input form__input" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+      </label>
+      <label class="form-label form__label email">Электронная почта:
+        <input class="form-input form__input" type="email" name="mail" placeholder="dmitry@alekseev.com">
+      </label>
+      <label class="form-label form__label deadline">Сроки:
+        <input class="form__input form-input" type="text" name="name" placeholder="Нужно успеть до завтра!!">
+      </label>
       <button class="form__btn-submit" type="submit">Оставить заявку</button>
 
       <label class="form__checkbox">
