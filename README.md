@@ -13,4 +13,4 @@ Every animation on this site was created using css transitions so they works smo
 # run and build
 This project is builded with Gulp. You can run this site on your local host after forking this repo, istalling all dependecies (npm i) and typed in terminal
 
-See more gulp settings in gulpfile
+See more gulp settings in gulpfile.js
