@@ -1,21 +1,29 @@
 {
-  "name": "gulp-example",
+  "name": "personal-webstie",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "The personal-webstie is full responsive using HTML, CSS and a little bit jQuery",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KonstHardy/personal-webstie.git"
+  },
+  "author": "KonstHardy",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KonstHardy/personal-webstie/issues"
+  },
+  "homepage": "https://github.com/KonstHardy/personal-webstie#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.2"
   },
-  "dependencies": {
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-notify": "^3.2.0"
-  }
+  "dependencies": {}
 }

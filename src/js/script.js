@@ -1,10 +1,9 @@
-$(function(){
+$(function () {
+  // animation
+  $(".elements, .elements-gradient").addClass("elements--active");
 
-// animation
-$('.elements, .elements-gradient').addClass('elements--active');
-
-// swipper
-  var mySwiper = new Swiper ('.slider', {
+  // swipper
+  var mySwiper = new Swiper(".slider", {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 20,
@@ -14,15 +13,12 @@ $('.elements, .elements-gradient').addClass('elements--active');
         slidesPerView: 2,
       },
       756: {
-        slidesPerView: 2,
         spaceBetween: 25,
       },
       992: {
-        slidesPerView: 2,
         spaceBetween: 30,
       },
       1024: {
-        slidesPerView: 2,
         spaceBetween: 35,
       },
       1366: {
@@ -31,53 +27,49 @@ $('.elements, .elements-gradient').addClass('elements--active');
       },
     },
     navigation: {
-      nextEl: '.slider__arrow--right',
-      prevEl: '.slider__arrow--left',
+      nextEl: ".slider__arrow--right",
+      prevEl: ".slider__arrow--left",
     },
     pagination: {
-      el: '.slider__pagination',
-      type: 'bullets',
+      el: ".slider__pagination",
+      type: "bullets",
       clickable: true,
     },
   });
 
-// menu mobile
-  var burger = document.querySelector('.header__btn-menu');
-  var menu = document.querySelector('.header__menu');
+  // menu mobile
+  var burger = document.querySelector(".header__btn-menu");
+  var menu = document.querySelector(".header__menu");
 
-  burger.addEventListener('click', function (e) {
+  burger.addEventListener("click", function (e) {
     e.preventDefault();
     //burger on/off
-    $(this).toggleClass('header__btn-menu--active');
+    $(this).toggleClass("header__btn-menu--active");
     //показать/скрыть меню
-    menu.classList.toggle('menu--mobile');
+    menu.classList.toggle("menu--mobile");
     //scroll on/off
-    $('html, body').toggleClass('stop-scroll');
+    $("html, body").toggleClass("stop-scroll");
   });
 
-
-  menu.addEventListener('click', function (e) {
+  menu.addEventListener("click", function (e) {
     // при нажатии на popup или на пункт меню
-    if(event.target == this || $('.menu__item')) {
-      var mql = window.matchMedia('all and (max-width: 1199px)');
+    if (event.target == this || $(".menu__item")) {
+      var mql = window.matchMedia("all and (max-width: 1199px)");
       if (mql.matches) {
         //burger on/off
-        burger.classList.toggle('header__btn-menu--active');
+        burger.classList.toggle("header__btn-menu--active");
         //показать/скрыть меню
-        menu.classList.toggle('menu--mobile');
+        menu.classList.toggle("menu--mobile");
         //scroll on/off
-        $('html, body').toggleClass('stop-scroll');
+        $("html, body").toggleClass("stop-scroll");
       }
-      // else {
-      //   // нет, размер окна более 479px
-      // }
-    };
+    }
   });
 
-// form callback (ввод цифр и валидация)
-  $('.form__input[type="tel"]').inputmask({"mask": "+7 (999) 999-99-99"});
+  // form callback (ввод цифр и валидация)
+  $('.form__input[type="tel"]').inputmask({ mask: "+7 999 999-99-99" });
 
-  $('.form__callback').each(function () {
+  $(".form__callback").each(function () {
     $(this).validate({
       errorPlacement: function (error, element) {
         return true;
@@ -92,62 +84,61 @@ $('.elements, .elements-gradient').addClass('elements--active');
         },
         mail: {
           required: true,
-        }
+        },
       },
     });
   });
 
-// form callback (open)
-  $('.btn-callback').click(function(){
-    $('.form').fadeIn(200);
+  // form callback (open)
+  $(".btn-callback").click(function () {
+    $(".form").fadeIn(200);
     //scroll-off
-    $('html, body').addClass('stop-scroll');
+    $("html, body").addClass("stop-scroll");
   });
 
-// form order project (open)
-  $('.order--project').click(function(){
-    $('.form').fadeIn(200);
+  // form order project (open)
+  $(".order--project").click(function () {
+    $(".form").fadeIn(200);
     // email/deadline
-    $('.email, .deadline').addClass('form__line--active');
+    $(".email, .deadline").addClass("form__line--active");
     //scroll-off
-    $('html, body').addClass('stop-scroll');
+    $("html, body").addClass("stop-scroll");
   });
 
-// form (close - button)
-  $('.form__btn-close').click(function(){
-    $('.form').fadeOut(200);
-    $('.email, .deadline').removeClass('form__line--active');
+  // form (close - button)
+  $(".form__btn-close").click(function () {
+    $(".form").fadeOut(200);
+    $(".email, .deadline").removeClass("form__line--active");
     //scroll-on
-    $('html, body').removeClass('stop-scroll');
+    $("html, body").removeClass("stop-scroll");
   });
 
-// form (close - popup)
-  $('.form').on('click', function(event) {
-    if(event.target == this) {
+  // form (close - popup)
+  $(".form").on("click", function (event) {
+    if (event.target == this) {
       $(this).fadeOut(200);
 
-      $('.email, .deadline').removeClass('form__line--active');
+      $(".email, .deadline").removeClass("form__line--active");
       //scroll-on
-      $('html, body').removeClass('stop-scroll');
-    };
+      $("html, body").removeClass("stop-scroll");
+    }
   });
 
-// проверка чекбокса
+  // проверка чекбокса
   var checkboxes = $("input[type=checkbox]");
 
-  $(".form").on('submit', function(e) {
+  $(".form").on("submit", function (e) {
     var checker = false;
-    checkboxes.each(function() {
-      if ($(this).prop('checked') == true) {
+    checkboxes.each(function () {
+      if ($(this).prop("checked") == true) {
         checker = true;
       }
     });
 
     if (checker == false) {
       e.preventDefault();
-      $('.form__text').addClass('form__text--error');
-      $('.form__text').addClass('checkbox-error');
+      $(".form__text").addClass("form__text--error");
+      $(".form__text").addClass("checkbox-error");
     }
   });
-
 });
