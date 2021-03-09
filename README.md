@@ -8,7 +8,7 @@ I have used HTML5 semantic elements. All CSS code is written according to the BE
 
 # Adaptivity
 
-I used @media queries to ensure that all page elements display correctly at any screen size.
+I used **@media queries** to ensure that all page elements display correctly at any screen size.
 
 # Animations
 
