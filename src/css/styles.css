@@ -334,6 +334,7 @@ a {
 }
 .title--1 {
   font-size: 30px;
+  transition: font-size ease-in-out 0.25s, line-height ease-in-out 0.25s;
 }
 .my-info__description {
   display: block;
@@ -342,6 +343,8 @@ a {
   font-weight: normal;
   color: #919bb3;
   margin: 14px 0 26px;
+  transition: font-size ease-in-out 0.25s, line-height ease-in-out 0.25s,
+    margin ease-in-out 0.25s;
 }
 .btn {
   cursor: pointer;
@@ -410,12 +413,17 @@ a {
   background: url("../../img/ellipse.svg") center no-repeat;
   background-position: top 122px left -20px;
   background-size: cover;
+  transition: width ease-in-out 0.35s, height ease-in-out 0.35s,
+    padding-top ease-in-out 0.35s, top ease-in-out 0.35s,
+    right ease-in-out 0.35s, background-position ease-in-out 0.35s;
 }
 .photo-wrapper__image {
   width: 224px;
   height: 334px;
   object-fit: contain;
   margin-left: 130px;
+  transition: width ease-in-out 0.35s, height ease-in-out 0.35s,
+    margin-left ease-in-out 0.35s;
 }
 /* .............. flying elements ............... */
 .elements,
@@ -516,6 +524,7 @@ a {
 }
 .title--2 {
   font-size: 30px;
+  transition: font-size ease-in-out 0.3s, line-height ease-in-out 0.3s;
 }
 .services__list {
   list-style: none;
@@ -529,6 +538,8 @@ a {
   margin: 0 auto 52px;
   width: 220px;
   padding: 79px 0 0;
+  transition: width ease-in-out 0.3s, padding ease-in-out 0.3s,
+    margin ease-in-out 0.3s;
 }
 .services__item--landing {
   background: url("../../img/icons/icon-landing.png") no-repeat top center;
@@ -551,6 +562,9 @@ a {
 }
 .slider {
   width: 280px;
+}
+.slider__item {
+  transition: width ease-in-out 0.7s;
 }
 .slider__picture {
   width: inherit;
@@ -584,7 +598,6 @@ a {
 }
 .examples__btn {
   outline: none;
-  transition: box-shadow 0.3s ease-in-out;
 }
 .examples__btn span {
   transition: letter-spacing 0.3s ease-in-out;
@@ -635,6 +648,7 @@ a {
   padding: 50px 0;
   background: linear-gradient(to top, #ff8f5a, #ff3791);
   color: #fff;
+  transition: padding ease-in-out 0.3s;
 }
 .promotion__body {
   position: relative;
@@ -780,8 +794,8 @@ a {
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
-  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out,
-    background linear 0.2s;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background linear 0.3s;
 }
 .social-networks__icon:hover {
   transform: rotate(360deg);
@@ -1090,7 +1104,8 @@ a {
     background: none;
     border: 1px solid #f82370;
     color: #ff6375;
-    transition: transform ease-in-out 0.15s;
+    transition: transform ease-in-out 0.15s, width 0.3s ease-in-out,
+      height 0.3s ease-in-out;
   }
   .btn-callback::before,
   .btn-callback::after {
