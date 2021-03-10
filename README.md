@@ -1,10 +1,10 @@
 ## Personal-webstie
 
-Full responsive using HTML, CSS and a little bit jQuery.
+Full responsive using HTML, CSS and jQuery a little bit.
 
 ## Layout
 
-I have used HTML5 semantic elements. All CSS code is written according to the BEM methodology.
+I used HTML5 semantic elements. All CSS code is written according to the BEM methodology.
 
 ## Adaptivity
 
@@ -16,6 +16,6 @@ Every animation on this site has been created using CSS transitions so they run 
 
 ## Run & Build
 
-This project is built using Gulp. You can run this site on your localhost after forking this repo, installing all dependencies **`npm i`** and typing in terminal **`gulp`**.
+This project is built using Gulp. You can run this site on your localhost after forking this repo, installing all dependencies **`npm i`** and typing in terminal **`gulp`**
 
 See additional Gulp settings in [gulpfile.js](https://github.com/KonstHardy/personal-webstie/blob/master/gulpfile.js)
