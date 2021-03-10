@@ -1,8 +1,8 @@
 $(function () {
-  // animation
+  //animation;
   $(".elements, .elements-gradient").addClass("elements--active");
 
-  // swipper
+  //swipper;
   var mySwiper = new Swiper(".slider", {
     loop: true,
     slidesPerView: 1,
@@ -37,36 +37,33 @@ $(function () {
     },
   });
 
-  // menu mobile
+  //mobile-menu;
   var burger = document.querySelector(".header__btn-menu");
   var menu = document.querySelector(".header__menu");
 
   burger.addEventListener("click", function (e) {
     e.preventDefault();
-    //burger on/off
+    //burger on/off;
     $(this).toggleClass("header__btn-menu--active");
-    //показать/скрыть меню
+    //menu show/hide;
     menu.classList.toggle("menu--mobile");
-    //scroll on/off
+    //scroll on/off;
     $("html, body").toggleClass("stop-scroll");
   });
 
+  //closing the mobile-menu when clicking on the background or menu item;
   menu.addEventListener("click", function (e) {
-    // при нажатии на popup или на пункт меню
-    if (event.target == this || $(".menu__item")) {
-      var mql = window.matchMedia("all and (max-width: 1199px)");
-      if (mql.matches) {
-        //burger on/off
-        burger.classList.toggle("header__btn-menu--active");
-        //показать/скрыть меню
-        menu.classList.toggle("menu--mobile");
-        //scroll on/off
-        $("html, body").toggleClass("stop-scroll");
-      }
+    if (e.target == this || $(".menu__item")) {
+      //burger on/off;
+      burger.classList.toggle("header__btn-menu--active");
+      //menu show/hide;
+      menu.classList.toggle("menu--mobile");
+      //scroll on/off;
+      $("html, body").toggleClass("stop-scroll");
     }
   });
 
-  // form callback (ввод цифр и валидация)
+  //form callback (input of numbers and validation);
   $('.form__input[type="tel"]').inputmask({ mask: "+7 999 999-99-99" });
 
   $(".form__callback").each(function () {
@@ -89,42 +86,36 @@ $(function () {
     });
   });
 
-  // form callback (open)
+  //form callback (open);
   $(".btn-callback").click(function () {
     $(".form").fadeIn(200);
-    //scroll-off
-    $("html, body").addClass("stop-scroll");
+    $("html, body").addClass("stop-scroll"); //scroll-off;
   });
 
-  // form order project (open)
+  //form order-project (open);
   $(".order--project").click(function () {
     $(".form").fadeIn(200);
-    // email/deadline
-    $(".email, .deadline").addClass("form__line--active");
-    //scroll-off
-    $("html, body").addClass("stop-scroll");
+    $(".email, .deadline").addClass("form__line--active"); //email/deadline;
+    $("html, body").addClass("stop-scroll"); //scroll-off;
   });
 
-  // form (close - button)
+  //form (close-button);
   $(".form__btn-close").click(function () {
     $(".form").fadeOut(200);
     $(".email, .deadline").removeClass("form__line--active");
-    //scroll-on
-    $("html, body").removeClass("stop-scroll");
+    $("html, body").removeClass("stop-scroll"); //scroll-on;
   });
 
-  // form (close - popup)
+  //form (close-popup);
   $(".form").on("click", function (event) {
     if (event.target == this) {
       $(this).fadeOut(200);
-
       $(".email, .deadline").removeClass("form__line--active");
-      //scroll-on
-      $("html, body").removeClass("stop-scroll");
+      $("html, body").removeClass("stop-scroll"); //scroll-on;
     }
   });
 
-  // проверка чекбокса
+  //checkbox test;
   var checkboxes = $("input[type=checkbox]");
 
   $(".form").on("submit", function (e) {
