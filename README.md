@@ -1,4 +1,4 @@
-# Personal-webstie
+# personal-webstie
 
 Full responsive using HTML, CSS and jQuery a little bit.
 
