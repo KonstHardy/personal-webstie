@@ -53,13 +53,13 @@ $(function () {
 
   //closing the mobile-menu when clicking on the background or menu item;
   menu.addEventListener("click", function (e) {
-    if (e.target == this || $(".menu__item")) {
+    if (e.target == this || $(".menu--mobile .menu__item")) {
       //burger on/off;
-      burger.classList.toggle("header__btn-menu--active");
+      burger.classList.remove("header__btn-menu--active");
       //menu show/hide;
-      menu.classList.toggle("menu--mobile");
+      menu.classList.remove("menu--mobile");
       //scroll on/off;
-      $("html, body").toggleClass("stop-scroll");
+      $("html, body").removeClass("stop-scroll");
     }
   });
 
