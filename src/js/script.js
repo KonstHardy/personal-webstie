@@ -54,12 +54,27 @@ $(function () {
   //closing the mobile-menu when clicking on the background or menu item;
   menu.addEventListener("click", function (e) {
     if (e.target == this || $(".menu--mobile .menu__item")) {
-      //burger on/off;
+      //burger off;
       burger.classList.remove("header__btn-menu--active");
-      //menu show/hide;
+      //menu hide;
       menu.classList.remove("menu--mobile");
-      //scroll on/off;
+      //scroll off;
       $("html, body").removeClass("stop-scroll");
+    }
+  });
+
+  //auto closing the mobile-menu when window width >= 1200px;
+  $(window).on("resize", function () {
+    if (
+      window.innerWidth >= 1200 &&
+      $(".header__menu").hasClass("menu--mobile")
+    ) {
+      //burger off;
+      burger.classList.toggle("header__btn-menu--active");
+      //menu hide;
+      menu.classList.toggle("menu--mobile");
+      //scroll off;
+      $("html, body").toggleClass("stop-scroll");
     }
   });
 
