@@ -1,6 +1,8 @@
 # personal-webstie
 
-Full responsive using HTML, CSS and jQuery a little bit.
+### Description
+
+The personal website is fully responsive using HTML, CSS and jQuery a little bit.
 
 ### Layout
 
@@ -14,8 +16,15 @@ I used [@media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
 
 Every animation on this site has been created using CSS transitions so they run smoothly.
 
+
+### Preview
+
+![Preview](./img/preview.png)
+
+
 ## Run & Build
 
-This project is built using Gulp. You can run this site on your localhost after forking this repo, installing all dependencies **`npm i`** and typing in terminal **`gulp`**
+This project is built using Gulp. You can fork this repo, by installing all dependencies of **`npm i`**, and run this site on your http://localhost:3000/ typing into terminal **`gulp`**
 
 See additional Gulp settings in [gulpfile.js](https://github.com/KonstHardy/personal-webstie/blob/master/gulpfile.js)
+
