@@ -30,5 +30,5 @@ See additional Gulp settings in [gulpfile.js](https://github.com/KonstHardy/pers
 
 
 ## Live Demo
-Live Project URL: [personal-webstie](https://www.konsthardy.ru/)
+Live Project URL: [personal-webstie](https://konsthardy.github.io/personal-webstie/)
 
