@@ -16,15 +16,32 @@ I used [@media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
 
 Every animation on this site has been created using CSS transitions so they run smoothly.
 
-
 ### Preview
 
 ![Preview](./preview/preview.png)
 
 
-## Run & Build
+## Available Scripts
 
-This project is built using Gulp. You can fork this repo, by installing all dependencies of **`npm i`** and run this site on your http://localhost:3000/ by typing **`gulp`** in the terminal.
+In the project directory, you can run (in the terminal):
+
+### `npm i`
+
+This command installs a package, and any packages that it depends on.
+
+### `gulp`
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+Builds the app for production to the `build` folder.<br />
+It correctly bundles in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
 See additional Gulp settings in [gulpfile.js](https://github.com/KonstHardy/personal-webstie/blob/master/gulpfile.js)
 
