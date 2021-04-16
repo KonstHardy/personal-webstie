@@ -23,7 +23,7 @@ Every animation on this site has been created using CSS transitions so they run 
 
 ## Available Scripts
 
-In the project directory, you can run (in the terminal):
+In the project directory, you can run in the terminal:
 
 ### `npm i`
 
