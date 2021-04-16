@@ -119,7 +119,7 @@ $(function () {
     $(".form").fadeOut(200);
     $(".email, .deadline").removeClass("form__line--active");
     $("html, body").removeClass("stop-scroll"); //scroll-on;
-    clearInputForm();
+    clearInputForm(); //clearing input fields;
   });
 
   //form (close-popup);
@@ -128,6 +128,7 @@ $(function () {
       $(this).fadeOut(200);
       $(".email, .deadline").removeClass("form__line--active");
       $("html, body").removeClass("stop-scroll"); //scroll-on;
+      clearInputForm(); //clearing input fields;
     }
   });
 
