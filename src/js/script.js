@@ -3,7 +3,7 @@ $(function () {
   $(".elements, .elements-gradient").addClass("elements--active");
 
   //swipper;
-  var mySwiper = new Swiper(".slider", {
+  let mySwiper = new Swiper(".slider", {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 20,
@@ -38,8 +38,8 @@ $(function () {
   });
 
   //mobile-menu;
-  var burger = document.querySelector(".header__btn-menu");
-  var menu = document.querySelector(".header__menu");
+  let burger = document.querySelector(".header__btn-menu");
+  let menu = document.querySelector(".header__menu");
 
   burger.addEventListener("click", function (e) {
     e.preventDefault();
@@ -131,11 +131,11 @@ $(function () {
     }
   });
 
-  //checkbox test;
-  var checkboxes = $("input[type=checkbox]");
+  //checkbox check;
+  let checkboxes = $("input[type=checkbox]");
 
   $(".form").on("submit", function (e) {
-    var checker = false;
+    let checker = false;
     checkboxes.each(function () {
       if ($(this).prop("checked") == true) {
         checker = true;
