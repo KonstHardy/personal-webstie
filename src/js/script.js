@@ -119,6 +119,7 @@ $(function () {
     $(".form").fadeOut(200);
     $(".email, .deadline").removeClass("form__line--active");
     $("html, body").removeClass("stop-scroll"); //scroll-on;
+    clearInputForm();
   });
 
   //form (close-popup);
@@ -147,4 +148,26 @@ $(function () {
       $(".form__text").addClass("checkbox-error");
     }
   });
+
+  //clearing input fields;
+  function clearInputForm() {
+    //name & validation class;
+    $("input[type=text][name=name]").val("") &&
+      $("input[type=text][name=name]").removeClass("error");
+
+    //phone & validation class;
+    $("input[type=tel][name=phone]").val("") &&
+      $("input[type=tel][name=phone]").val("").removeClass("error");
+
+    //email & validation class;
+    $("input[type=email][name=mail]").val("") &&
+      $("input[type=email][name=mail]").removeClass("error");
+
+    //deadline;
+    $("input[type=text][name=deadline").val("");
+
+    //checkbox & validation class;
+    $(".form__text").removeClass("form__text--error");
+    $(".form__text").removeClass("checkbox-error");
+  }
 });
